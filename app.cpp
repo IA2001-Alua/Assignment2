@@ -24,7 +24,20 @@ int main()
     for (int i = 0; i < 5; i++) {
         cout << Persons[i].getName() << " " << Persons[i].getAge()<< " " << Persons[i].getLuck()<< endl;
     }
-    
+    cout << "Luckiest person: ";
+    int max = Persons[0].getLuck();
+    int index;
+    for (int i = 0; i < 5; i++) {
+        if (max < Persons[i].getLuck()) {
+            max = Persons[i].getLuck();
+            index = i;
+        }
+    }
+    cout << Persons[index].getName()<< ", rate of luck "<< Persons[index].getLuck() << endl;
+
+    cout << "Luck of first person: " << Persons[0].getLuck() << ". Luck of second person: " << Persons[1].getLuck() << endl;
+    changeLuck(Persons[0], Persons[1]);
+    cout << "Luck of first person: " << Persons[0].getLuck() << ". Luck of second person: " << Persons[1].getLuck();
 
     delete a, b, c, d, e;
 
