@@ -21,4 +21,24 @@ int main()
     Person* e = new Person("Ari", 20, rand() % 100);
     vector<Person> People { *a, *b, *c, *d, *e };
 
+    for (int i = 0; i < 5; i++) {
+        cout << People[i].getName() << " " << People[i].getAge()<< " " << People[i].getLuck()<< endl;
+    }
+    cout << "Luckiest person: ";
+    int max = People[0].getLuck();
+    int ind;
+    for (int i = 0; i < 5; i++) {
+        if (max < People[i].getLuck()) {
+            max = People[i].getLuck();
+            ind = i;
+        }
+    }
+    cout << People[ind].getName()<< ", rate of luck "<< People[ind].getLuck() << endl;
+
+    cout << "Luck of first person: " << People[0].getLuck() << ". Luck of second person: " << People[1].getLuck() << endl;
+    changeLuck(People[0], People[1]);
+    cout << "Luck of first person: " << People[0].getLuck() << ". Luck of second person: " << People[1].getLuck();
+
+    delete a, b, c, d, e;
+
 }
