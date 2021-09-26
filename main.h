@@ -15,7 +15,6 @@ public:
 	string getName();
 	int getAge();
 	int getLuck();
-	string getlLucky();
 
 private:
 	string name;

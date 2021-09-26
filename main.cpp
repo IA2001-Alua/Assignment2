@@ -40,10 +40,3 @@ int Person::getLuck()
 {
 	return luck;
 }
-
-string Person::getlLucky()
-{
-	string getlucky = " ";
-	cout << getlucky << endl;
-	return getlucky;
-}
