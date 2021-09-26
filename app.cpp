@@ -24,7 +24,6 @@ int main()
     for (int i = 0; i < 5; i++) {
         cout << Persons[i].getName() << " " << Persons[i].getAge()<< " " << Persons[i].getLuck()<< endl;
     }
-
     
 
     delete a, b, c, d, e;
